@@ -7,7 +7,7 @@ const articles = [
     {
         id: 'allon4',
         tag: 'Имплантация',
-        date: '15 марта 2024',
+        date: '15 марта 2026',
         readTime: '7 мин',
         title: 'All-on-4: полное восстановление зубного ряда за один день',
         excerpt: 'Технология All-on-4 позволяет восстановить все зубы на одной челюсти всего на 4 имплантатах. Пациент получает временный несъемный протез в день операции.',
@@ -42,7 +42,7 @@ const articles = [
     {
         id: 'zirconia',
         tag: 'Протезирование',
-        date: '28 февраля 2024',
+        date: '28 февраля 2026',
         readTime: '5 мин',
         title: 'Циркониевые коронки vs металлокерамика: подробное сравнение',
         excerpt: 'Сравниваем два самых популярных материала для зубных коронок. Почему цирконий стал золотым стандартом в современной стоматологии.',
@@ -67,7 +67,7 @@ const articles = [
     {
         id: 'microscope',
         tag: 'Эндодонтия',
-        date: '10 января 2024',
+        date: '10 января 2026',
         readTime: '6 мин',
         title: 'Лечение каналов под микроскопом: зачем это нужно и что это даёт',
         excerpt: 'Стоматологический микроскоп увеличивает операционное поле в 25 раз. Это позволяет находить скрытые каналы и спасать зубы, которые другие клиники предлагали удалить.',
@@ -98,7 +98,7 @@ const articles = [
 ];
 
 const SEOArticles = () => {
-    const [openId, setOpenId] = useState(null);
+    const [openIds, setOpenIds] = useState([]);
 
     return (
         <section id="blog" style={{ background: BG, padding: '5rem 0' }}>
@@ -113,7 +113,7 @@ const SEOArticles = () => {
 
                 <div style={{ maxWidth: 860, margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
                     {articles.map(a => {
-                        const isOpen = openId === a.id;
+                        const isOpen = openIds.includes(a.id);
                         return (
                             <article key={a.id} itemScope itemType="https://schema.org/Article"
                                 style={{
@@ -125,7 +125,7 @@ const SEOArticles = () => {
 
                                 {/* Header — always visible */}
                                 <button
-                                    onClick={() => setOpenId(isOpen ? null : a.id)}
+                                    onClick={() => setOpenIds(prev => prev.includes(a.id) ? prev.filter(id => id !== a.id) : [...prev, a.id])}
                                     style={{
                                         width: '100%', display: 'flex', flexDirection: 'column', gap: '0.5rem',
                                         padding: '1.5rem 1.75rem', background: isOpen ? `${TEAL}06` : 'transparent',
