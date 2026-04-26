@@ -5,12 +5,10 @@ const MAPS_LINK = 'https://maps.google.com/?q=Алматы+ул.+Кожабек�
 
 const GoogleMap = () => {
     return (
-        <section id="map" style={{ position: 'relative', height: 480, width: '100%', overflow: 'hidden' }}>
+        <section id="map" className="map-container">
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2909.1174!2d76.899!3d43.208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38836ec!2z0YPQu9C40YbQsCDQmtC-0LbQsNCx0LXQutC-0LLQsCAxOSwg0JDQu9C80LDRgtGLIDA1MDAwMA!5e0!3m2!1sru!2skz!4v1700000000000!5m2!1sru!2skz"
-                width="100%"
-                height="100%"
-                style={{ border: 0, display: 'block' }}
+                className="map-iframe"
                 allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
@@ -18,21 +16,7 @@ const GoogleMap = () => {
             />
 
             {/* Info Card Overlay */}
-            <div style={{
-                position: 'absolute',
-                top: '2rem',
-                left: '2rem',
-                background: 'rgba(255,255,255,0.96)',
-                backdropFilter: 'blur(16px)',
-                borderRadius: '1.5rem',
-                padding: '1.75rem',
-                maxWidth: 300,
-                boxShadow: '0 16px 48px rgba(27,107,104,0.18)',
-                border: '1px solid rgba(27,107,104,0.1)',
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '1rem',
-            }}>
+            <div className="map-card">
                 <h4 style={{ fontWeight: 900, color: NAVY, fontSize: '1.05rem', margin: 0 }}>Ждём вас в гостях</h4>
 
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>

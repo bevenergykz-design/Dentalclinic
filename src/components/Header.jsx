@@ -42,7 +42,7 @@ const Header = ({ onBookClick }) => {
                     {/* Logo */}
                     <a href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
                         <img src={logo} alt="My Dental Company" style={{ height: 40, objectFit: 'contain' }} />
-                        <div className="hidden md:block" style={{ borderLeft: `1px solid rgba(27,107,104,0.12)`, paddingLeft: '0.6rem' }}>
+                        <div className="header-title" style={{ borderLeft: `1px solid rgba(27,107,104,0.12)`, paddingLeft: '0.6rem' }}>
                             <p style={{ fontWeight: 800, fontSize: '0.9rem', color: TEAL, lineHeight: 1.1 }}>My Dental Company</p>
                             <p style={{ fontSize: '0.58rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: MUTED }}>Стоматологическая клиника</p>
                         </div>
@@ -61,7 +61,7 @@ const Header = ({ onBookClick }) => {
                     </nav>
 
                     {/* Desktop right */}
-                    <div className="hidden md:flex" style={{ alignItems: 'center', gap: '1rem' }}>
+                    <div className="header-actions">
                         <a href={WA} target="_blank" rel="noreferrer"
                             style={{ display: 'flex', alignItems: 'center', gap: '0.35rem', fontWeight: 700, fontSize: '0.82rem', color: NAVY, textDecoration: 'none' }}>
                             <Phone size={14} style={{ color: TEAL }} /> {PH}

@@ -86,7 +86,7 @@ const PriceList = ({ onBookClick }) => {
                                                         </div>
                                                         <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexShrink: 0 }}>
                                                             <span style={{ fontWeight: 900, fontSize: '0.95rem', color: NAVY }}>{it.price}</span>
-                                                            <button onClick={onBookClick} className="hidden md:flex"
+                                                            <button onClick={onBookClick} className="price-book-btn"
                                                                 style={{ alignItems: 'center', gap: '0.3rem', background: TEAL, color: WHITE, fontWeight: 700, fontSize: '0.72rem', padding: '0.35rem 0.9rem', borderRadius: 999, border: 'none', cursor: 'pointer' }}>
                                                                 <CalendarCheck size={12} /> Записаться
                                                             </button>

@@ -10,11 +10,11 @@ const serviceLinks = ['Имплантация', 'Протезирование', 
 
 const Footer = () => (
     <footer id="contact" style={{ background: FBG, color: WHITE }}>
-        <div className="container" style={{ paddingTop: '4.5rem', paddingBottom: '2.5rem' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(210px, 1fr))', gap: '2.5rem', paddingBottom: '3rem', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
+        <div className="container footer-container">
+            <div className="footer-grid">
 
                 {/* Brand */}
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+                <div className="footer-brand" style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
                         <img
                             src={logo}
@@ -65,7 +65,7 @@ const Footer = () => (
                 </div>
 
                 {/* Contacts */}
-                <div>
+                <div className="footer-contacts">
                     <h4 style={{ fontWeight: 800, fontSize: '0.68rem', textTransform: 'uppercase', letterSpacing: '0.12em', color: TEAL_LT, marginBottom: '1.25rem' }}>Контакты</h4>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
                         {[

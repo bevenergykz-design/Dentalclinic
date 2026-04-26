@@ -11,7 +11,7 @@ import { TEAL, TEAL_LT, MINT, WHITE, NAVY } from '../brand';
 const TrustBar = () => (
     <div style={{ background: TEAL }}>
         <div className="container" style={{ padding: '3rem 2rem' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '1.5rem' }} className="lg:grid-cols-4">
+            <div className="trust-grid">
                 {[
                     { val: '2000+', label: 'Довольных пациентов' },
                     { val: '15+', label: 'Опытных врачей' },
