@@ -128,7 +128,7 @@ body {
 
 /* RESPONSIVE LAYOUT FIXES (MIGRATED FROM TAILWIND) */
 .header-title {
-  display: none;
+  display: block;
 }
 
 .header-actions {
