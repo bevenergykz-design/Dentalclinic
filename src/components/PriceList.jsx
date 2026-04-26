@@ -31,7 +31,7 @@ const cats = [
 ];
 
 const PriceList = ({ onBookClick }) => {
-    const [openId, setOpenId] = useState('imp');
+    const [openIds, setOpenIds] = useState(['imp']);
 
     return (
         <section id="prices" style={{ background: BG, padding: '5rem 0' }}>
@@ -44,7 +44,7 @@ const PriceList = ({ onBookClick }) => {
 
                 <div style={{ maxWidth: 800, margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                     {cats.map(c => {
-                        const isOpen = openId === c.id;
+                        const isOpen = openIds.includes(c.id);
                         return (
                             <div key={c.id} style={{
                                 background: WHITE, borderRadius: '1.25rem', overflow: 'hidden',
@@ -52,7 +52,7 @@ const PriceList = ({ onBookClick }) => {
                                 boxShadow: isOpen ? `0 6px 30px ${TEAL}10` : `0 1px 8px ${TEAL}06`,
                                 transition: 'border-color 0.3s, box-shadow 0.3s',
                             }}>
-                                <button onClick={() => setOpenId(isOpen ? null : c.id)} style={{
+                                <button onClick={() => setOpenIds(prev => prev.includes(c.id) ? prev.filter(id => id !== c.id) : [...prev, c.id])} style={{
                                     width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between',
                                     padding: '1.25rem 1.5rem', background: isOpen ? `${TEAL}06` : 'transparent',
                                     border: 'none', cursor: 'pointer', fontFamily: 'inherit',
