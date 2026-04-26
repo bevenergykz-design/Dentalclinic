@@ -89,7 +89,7 @@ const Footer = () => (
             </div>
 
             <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '0.75rem', paddingTop: '1.75rem' }}>
-                <p style={{ fontSize: '0.72rem', color: 'rgba(255,255,255,0.25)', fontWeight: 600 }}>© 2025 My Dental Company. Все права защищены.</p>
+                <p style={{ fontSize: '0.72rem', color: 'rgba(255,255,255,0.25)', fontWeight: 600 }}>© 2026 My Dental Company. Все права защищены.</p>
                 <div style={{ display: 'flex', gap: '1.5rem' }}>
                     {['Политика конфиденциальности', 'Публичная оферта'].map(t => (
                         <a key={t} href="#" style={{ fontSize: '0.72rem', color: 'rgba(255,255,255,0.25)', fontWeight: 600, textDecoration: 'none', transition: 'color 0.2s' }}

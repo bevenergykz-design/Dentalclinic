@@ -153,11 +153,9 @@ const SEOArticles = () => {
                                         </span>
                                     </div>
 
-                                    {!isOpen && (
-                                        <p itemProp="description" style={{ fontSize: '0.88rem', color: MUTED, lineHeight: 1.6, margin: 0 }}>
-                                            {a.excerpt}
-                                        </p>
-                                    )}
+                                    <p itemProp="description" style={{ fontSize: '0.88rem', color: MUTED, lineHeight: 1.6, margin: 0 }}>
+                                        {a.excerpt}
+                                    </p>
                                 </button>
 
                                 {/* Expanded content */}
